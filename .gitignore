@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.playwright-cli/
+.wrangler/
+node_modules/

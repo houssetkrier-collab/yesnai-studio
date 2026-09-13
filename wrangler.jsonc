@@ -1,0 +1,31 @@
+{
+  "name": "yesnai-studio",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-08-22",
+  "workers_dev": true,
+  "assets": {
+    "directory": "public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/v1/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "yesnai-studio",
+      "database_id": "fc4bf789-6aee-4fdf-985e-5c85230be4d6",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "triggers": {
+    "crons": ["*/5 * * * *"]
+  },
+  "vars": {
+    "YESNAI_BASE": "https://nai.rinko.ai"
+  },
+  "r2_buckets": [
+    {
+      "binding": "R2",
+      "bucket_name": "yesnai-gallery"
+    }
+  ]
+}
